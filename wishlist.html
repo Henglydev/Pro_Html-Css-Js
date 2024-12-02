@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo/small_logo.png" alt="AD" id="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="shopping-cart"><a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a><span>0</span></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="wish-head">
+        <h1>Welcome to Wishlist</h1>
+        <h4>Add your dream product there!!!</h4>
+    </section>
+
+    <section id="wishlist">
+        <h1>Add To Wishlist</h1>
+
+        <div class="product">
+            <img src="img/product/KBD/KB01.png" alt="Product 1">
+            <span>Backlight Pro Black Edition</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+    
+        <div class="product">
+            <img src="img/product/KBD/KB02.png" alt="Product 2">
+            <span>Aula F2183 HotSwap Mechanical RGB Gaming Keyboard (Black)</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB03.png" alt="Product 2">
+            <span>Purple_White_Pro_Edition</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB04.png"  alt="Product 2">
+            <span>RGB Mechanical_Gaming</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB05.png" alt="Product 2">
+            <span>Backlight Mechanical_Gaming</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB06.png" alt="Product 2">
+            <span>RGB Blight-small Gaming</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB07.png" alt="Product 2">
+            <span>RGB_blacklight-small</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB08.png" alt="Product 2">
+            <span>Blackwindow-v3-pro</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB09.png" alt="Product 2">
+            <span>Wired Gaming Keyboard and Mouse Mice Pad Rainbow LED Backlit</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="img/product/KBD/KB10.png" alt="KB10">
+            <span>SteelSeries Apex 100 Gaming Keyboard</span>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        
+        <div class="dis-wish">
+            <h2>Your Wishlist</h2><br>
+            <ul class="wishlist"></ul>  
+        </div>
+        
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo/small_logo.png" alt="AD">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 123 BKK, Street 345, Phnom Penh</p>
+            <p><strong>Phone:</strong> +855 12345678 / +855 9876543 </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-telegram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="delivery.html">Delivery Information</a>
+            <a href="policy.html">Privacy Policy</a>
+            <a href="t&c.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="track.html">Track My Order</a>
+            <a href="help.html">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>Service</h4>
+            <a href="fdelivery.html">fast delivery</a>
+            <a href="support.html">support 24/7</a>
+            <a href="refund.html">free refund</a>
+            <a href="maintenance.html">maintenance</a>
+            <a href="web.html">create website</a>
+        </div>
+
+        <div class="copyright">
+            <p>&#169; 2023, AD - Best of the Best</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToWishlistButtons = document.querySelectorAll('.add-to-wishlist');
+            const wishlistContainer = document.querySelector('.wishlist');
+
+            addToWishlistButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.parentNode.querySelector('span').textContent;
+                    const productImage = this.parentNode.querySelector('img').src;
+                    addToWishlist(productName, productImage);
+                });
+            });
+
+            function addToWishlist(productName, productImage) {
+                const wishlistItem = document.createElement('li');
+                wishlistItem.classList.add('wishlist-item');
+                wishlistItem.innerHTML = `
+                    <img src="${productImage}" alt="${productName} Image">
+                    <span>${productName}</span>
+                    <button class="remove-button" onclick="removeFromWishlist(this)">Remove</button>
+                `;
+                wishlistContainer.appendChild(wishlistItem);
+            }
+
+            window.removeFromWishlist = function(button) {
+                const wishlistItem = button.parentNode;
+                wishlistContainer.removeChild(wishlistItem);
+            };
+        });
+    </script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

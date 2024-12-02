@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo/small_logo.png" alt="AD" id="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="about" class="about-header">  
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="img/about/a1.png" alt="">
+        <div>
+            <h2>Who We Are?</h2>
+            <p>Welcome to the forefront of innovation and style – welcome to AD! We are your destination for cutting-edge tech accessories that seamlessly blend functionality with flair. At AD, we understand that technology is not just a part of our lives; it's an extension of who we are. That's why we are dedicated to curating a dynamic collection of tech accessories designed to elevate your digital experience. Whether you're in search of sleek phone cases that offer both protection and style, ergonomic laptop stands for enhanced productivity, or the latest in wireless charging technology, we've got you covered. Our commitment extends beyond the latest gadgets; we prioritize quality, aesthetics, and user-centric design to ensure that our accessories seamlessly integrate into your lifestyle. Join us on the journey of transforming the ordinary into the extraordinary, one tech accessory at a time. Embrace the future with AD – where innovation meets expression.</p>
+            <abbr title="">where innovation meets expression, and every click, swipe, and tap is an opportunity to enhance your digital lifestyle.</abbr>
+            <br><br>
+            <div id="runtxt"></div>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo/small_logo.png" alt="AD">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 123 BKK, Street 345, Phnom Penh</p>
+            <p><strong>Phone:</strong> +855 12345678 / +855 9876543 </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-telegram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="delivery.html">Delivery Information</a>
+            <a href="policy.html">Privacy Policy</a>
+            <a href="t&c.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="track.html">Track My Order</a>
+            <a href="help.html">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>Service</h4>
+            <a href="fdelivery.html">fast delivery</a>
+            <a href="support.html">support 24/7</a>
+            <a href="refund.html">free refund</a>
+            <a href="maintenance.html">maintenance</a>
+            <a href="web.html">create website</a>
+        </div>
+
+        <div class="copyright">
+            <p>&#169; 2023, AD - Best of the Best</p>
+        </div>
+    </footer>
+    
+    <script>
+        /* Runtxt about*/
+        var txttop="we specialize in providing a curated selection of tech accessories that not only keep pace with the rapidly evolving world of technology but also elevate your daily interactions with your devices. From sleek and protective phone cases that make a statement to high-performance audio gear that transforms your listening experience, we've meticulously crafted our collection to cater to tech enthusiasts, professionals, and anyone who values the perfect blend of form and function. Our mission is to empower you to personalize and optimize your tech world, ensuring that your devices not only meet your needs but also reflect your unique style.";
+        var indextop=0;
+        function runingtop(){
+            document.getElementById('runtxt').innerHTML=txttop.substr(indextop,120);
+            indextop+=1;
+            if(indextop+190>txttop.length){
+                indextop=0;
+            }
+        }
+        setInterval(function(){
+            runingtop() ;
+        },100)
+    </script>
+</body>
+</html>
